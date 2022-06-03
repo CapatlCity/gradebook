@@ -4,11 +4,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>GoldStandard Online GradeBook</title> <!--Branding for tab-->
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <nav>NAV</nav>
+    <heading>Welcome to the GoldStandard Online GradeBook</heading> <!--need to add logo-->
+    <nav>NAV
+      <ul>
+        <li><a href="default.asp">Home</a></li>
+        <li><a href="news.asp">News</a></li>
+        <li><a href="contact.asp">Contact</a></li>
+        <li><a href="about.asp">About</a></li>
+      </ul>
+    </nav> <!--dummy links and real links to include free online calculator-->
+    <br>
     <div id="formcontainer">
         <form id="inputForm">
             <label for="fname">First name:</label>
@@ -17,7 +26,7 @@
             <input type="text" id="lname" name="lname"><br><br>
             <label for="grade">Grade:</label>
             <input type="number" id="grade" name="Grade"><br>
-
+            <br>
             <input type="submit" value="Submit">
           </form>
     </div>
@@ -25,20 +34,35 @@
     <div id="tablecontainer">
         <table id="gradesTable">
             <tr>
-                <th>FirstName</th>
+                <th>First Name</th>
                 <th>Last Name</th>
                 <th>Grade</th>
             </tr>
             <tr>
               <td> Jane</td>
               <td>Doe</td>
-              <td> 90</td> 
+              <td>100</td> 
             </tr>
             <tr>
               <td>Fred</td>
               <td>Flintstone</td>
-              <td>87</td>
+              <td>80</td>
             </tr>
+            <tr>
+              <td>Frances</td>
+              <td>Sample</td>
+              <td>78</td>
+            </tr>
+            <tr>
+            <td>Peter</td>
+            <td>Placeholder</td>
+            <td>65</td>
+          </tr>
+          <tr>
+            <td>AA-ron</td>
+            <td>Bah-Loc-Kay</td>
+            <td>54</td>
+          </tr>
           </table>
     </div>
     <script src="./script.js"></script>
