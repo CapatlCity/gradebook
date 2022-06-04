@@ -12,16 +12,23 @@ inputForm.addEventListener("submit", (event) => {
   console.log(lastName);
   console.log(grade);
 
+// create new var, calculate grades
+
+
   var tableInput = document.createElement("tr"); // table row created in js via document query
+  var tableFirstName = document.createElement("td");
+      tableFirstName.innerHTML = firstName; 
+  var tableLastName = document.createElement("td");
+      tableLastName.innerHTML = lastName;
+  var tableGrade = document.createElement("td"); // create GH issue for converting numeric data into ABCDF
+      tableGrade.innerHTML = grade;
+      // append td nodes to tr node per line 27
   var outputTable = document.getElementById("gradesTable"); //this is example of a DOM NODE!
   outputTable.appendChild(tableInput);
 });
 
 // TO DO
-// PUT OUTPUT IN THE TABLE
-// have form populate input from form into table
-// decide if we want colors to change as grade and names calculated
-// create loop to calculate grade and determine what color will output
+// create if else statement
 
 /* let correct_button = document.querySelector("#correct"); //change color of the 4th answer button from white to green when clicked.
     correct_button.addEventListener('click', function() {
