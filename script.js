@@ -16,45 +16,28 @@ inputForm.addEventListener("submit", (event) => {
 
 
   var tableInput = document.createElement("tr"); // table row created in js via document query
+  
   var tableFirstName = document.createElement("td");
       tableFirstName.innerHTML = firstName; 
+      tableFirstName.appendChild(tableInput); // attenpt to append td nodes to tr node per line 33
+
   var tableLastName = document.createElement("td");
       tableLastName.innerHTML = lastName;
+      tableLastName.appendChild(tableInput); // attenpt to append td nodes to tr node per line 33
+
   var tableGrade = document.createElement("td"); // create GH issue for converting numeric data into ABCDF
       tableGrade.innerHTML = grade;
-      // append td nodes to tr node per line 27
+      tableGrade.appendChild(tableInput);  // attenpt to append td nodes to tr node per line 33
+      
   var outputTable = document.getElementById("gradesTable"); //this is example of a DOM NODE!
-  outputTable.appendChild(tableInput);
+      outputTable.appendChild(tableInput);
 });
 
-// TO DO
-// create if else statement
-
-/* let correct_button = document.querySelector("#correct"); //change color of the 4th answer button from white to green when clicked.
-    correct_button.addEventListener('click', function() {
-        correct_button.style.backgroundColor = "green";
-        document.querySelector('#feedback1').innerHTML = 'Correct!';
-
-});
-
-USE TRIVIA LAB CODE AS A GUIDE OF SORTS -
- SEE IF THE DOCUMENT.QUERYSELECTOR FOR #FEEEDBACK CAN WORK 
-IF  <P> IS PLACED INSIDE OF A TABLE CELL
-let wrong_button = document.querySelectorAll(".wrong");
-    //change color of the 1st through 3rd buttons from white to red when clicked.
-    for (let i = 0; i < wrong_button.length; i++)
-    {
-    wrong_button[i].addEventListener('click', function() {
-        wrong_button[i].style.backgroundColor = "red";
-        document.querySelector('#feedback1').innerHTML = 'Wrong!';
-
-    });
-
-    }
-
-// Part 2: add shortanswer form with text input and "check answer" submit button to HTML.
-//remember DIV id is "shortanswer" and is linked to CSS styling
 
 
-   
-    });    */
+
+
+
+
+
+
