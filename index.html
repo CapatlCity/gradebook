@@ -4,41 +4,49 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GoldStandard Online GradeBook</title> <!--Branding for tab-->
+    <title>GoldStandard Online GradeBook</title>
+    <!--Branding for tab-->
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <heading>Welcome to the GoldStandard Online GradeBook</heading> <!--need to add logo-->
-    <nav>MENU
+    <heading>Welcome to the GoldStandard Online GradeBook</heading>
+    <!--need to add logo-->
+    <nav>
+      MENU
       <ul>
         <li><a href="default.asp">Home</a></li>
         <li><a href="contact.asp">Contact</a></li>
         <li><a href="about.asp">About</a></li>
       </ul>
-    </nav> <!--add real links to include free online calculator and use flexbox per HTML cert project-->
-    <br>
+    </nav>
+    <!--add real links to include free online calculator and use flexbox per HTML cert project-->
+    <br />
     <div id="formcontainer">
-        <form id="inputForm">
-            <label for="fname">First name:</label>
-            <input type="text" id="fname" name="fname"><br><br>
-            <label for="lname">Last name:</label>
-            <input type="text" id="lname" name="lname"><br><br>
-            <label for="grade">Grade:</label>
-            <input type="number" id="grade" name="Grade"><br>
-            <br>
-            <input type="submit" value="Submit">
-          </form>
+      <form id="inputForm">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname" /><br /><br />
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname" /><br /><br />
+        <label for="grade">Grade:</label>
+        <input type="number" id="grade" name="Grade" /><br />
+        <br />
+        <input type="submit" value="Submit" />
+      </form>
     </div>
 
     <div id="tablecontainer">
-        <table id="gradesTable">
-            <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Grade</th>
-            </tr>
-            
-          </table>
+      <table id="gradesTable">
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Grade</th>
+        </tr>
+        <tr>
+          <td></td> <!--insert the javascript nodes here to input data June 5-->
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
     </div>
     <script src="./script.js"></script>
   </body>
