@@ -10,6 +10,9 @@ inputForm.addEventListener("submit", (event) => {
   console.log(lastName);
   console.log(grade);
 
+
+  // testing the creation of a new branch
+
   // create conditional if-else if-else loop for converting numerical value to ABCDF
 
   var tableInput = document.createElement("td"); // table row created in js via document query
@@ -19,22 +22,27 @@ inputForm.addEventListener("submit", (event) => {
 
   var tableFirstName = document.createElement("td");
   tableFirstName.innerHTML = firstName;
-  tableFirstName.appendChild(tableInput); // attenpt to append td nodes to tr node per line 33
+  tableFirstName.appendChild(tableInput); 
 
   var tableLastName = document.createElement("td");
   tableLastName.innerHTML = lastName;
-  tableLastName.appendChild(tableInput); // attenpt to append td nodes to tr node per line 33
+  tableLastName.appendChild(tableInput); 
 
-  var tableGrade = document.createElement("td"); // create GH issue for converting numeric data into ABCDF
+  var tableGrade = document.createElement("td"); 
   tableGrade.innerHTML = grade;
-  tableGrade.appendChild(tableInput); // attenpt to append td nodes to tr node per line 33
+  tableGrade.appendChild(tableInput); 
 
   var outputTable = document.getElementById("gradesTable"); //this is example of a DOM NODE!
   outputTable.appendChild(tableInput);
 });
-//have table display numeric grade converted into ABCD or F
 
-//have table display a color based on alphabetical grade output using a boolean outputting green yellow orange red purple for ABCDF respectively
+// TO DO - have table display numeric grade converted into ABCD or F
+
+// TO DO - have table display a color based on alphabetical grade output using a boolean outputting green yellow orange red purple for ABCDF respectively
+// create GH issue for converting numeric data into ABCDF
+
+//THINGS TO TRY
+// attenpt to append td nodes to tr node per line 33
 
 const gradeInput = document.getElementById("grade").value;
 if (gradeInput > 90) {
@@ -52,4 +60,4 @@ if (gradeInput > 90) {
 }
 
 //document.querySelector(tbd).addEventListener('submit', functionnametbd)
-//functiontbd
+
