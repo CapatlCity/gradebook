@@ -1,17 +1,14 @@
 var gradesTable = document.getElementById("gradesTable");
 var inputForm = document.getElementById("inputForm");
 
-// override default browser reset after "submit"
 inputForm.addEventListener("submit", (event) => {
-  event.preventDefault();
+  event.preventDefault("submit"); // override default browser reset after "submit"
   var firstName = document.getElementById("fname").value;
   var lastName = document.getElementById("lname").value;
   var grade = document.getElementById("grade").value;
   console.log(firstName);
   console.log(lastName);
   console.log(grade);
-
-  // create new var, calculate grades
 
   // create conditional if-else if-else loop for converting numerical value to ABCDF
 
