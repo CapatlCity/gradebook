@@ -1,45 +1,46 @@
 var gradesTable = document.getElementById("gradesTable");
 var inputForm = document.getElementById("inputForm");
 
-// override default browser reset after "submit"
 inputForm.addEventListener("submit", (event) => {
-  event.preventDefault();
+  event.preventDefault("submit"); // override default browser reset after "submit"
   var firstName = document.getElementById("fname").value;
   var lastName = document.getElementById("lname").value;
   var grade = document.getElementById("grade").value;
   console.log(firstName);
   console.log(lastName);
   console.log(grade);
-
-  // create new var, calculate grades
-
-  // create conditional if-else if-else loop for converting numerical value to ABCDF
-
-  var tableInput = document.createElement("td"); // table row created in js via document query
-
-  // have table display first name, last name from form "as is"
-  //-- populate firstname and lastname input from form field into table via a function
-
-  var tableFirstName = document.createElement("td");
-  tableFirstName.innerHTML = firstName;
-  tableFirstName.appendChild(tableInput); // attenpt to append td nodes to tr node per line 33
-
-  var tableLastName = document.createElement("td");
-  tableLastName.innerHTML = lastName;
-  tableLastName.appendChild(tableInput); // attenpt to append td nodes to tr node per line 33
-
-  var tableGrade = document.createElement("td"); // create GH issue for converting numeric data into ABCDF
-  tableGrade.innerHTML = grade;
-  tableGrade.appendChild(tableInput); // attenpt to append td nodes to tr node per line 33
-
-  var outputTable = document.getElementById("gradesTable"); //this is example of a DOM NODE!
-  outputTable.appendChild(tableInput);
 });
-//have table display numeric grade converted into ABCD or F
 
-//have table display a color based on alphabetical grade output using a boolean outputting green yellow orange red purple for ABCDF respectively
+var gradeArray = [
+  { firstName: "Dan", lastName: "Rosenbaum", gradeOutput: 78 },
+  { firstName: "Deb", lastName: "ONair", gradeOutput: 95 },
+  { firstName: "Jane", lastName: "Doe", gradeOutput: 80 },
+];
+
+function renderTable() {
+  gradeArray.forEach((grade) => {
+    //generate a code block for each grade
+    var newRow = document.createElement("tr");
+    newRow.innerHTML = `<td>${grade.firstName}</td>
+    <td>${grade.lastName}</td>
+    <td>${grade.gradeOutput}</td>`;
+    //append it to the gradesTable
+    gradesTable.appendChild(newRow)
+  });
+}
+
+renderTable();
+
+// TO DO - have table display numeric grade converted into ABCD or F
+
+// TO DO - have table display a color based on alphabetical grade output using a boolean outputting green yellow orange red purple for ABCDF respectively
+// create GH issue for converting numeric data into ABCDF
+
+//THINGS TO TRY
+// attenpt to append td nodes to tr node per line 33
 
 const gradeInput = document.getElementById("grade").value;
+
 if (gradeInput > 90) {
   TextDecoder.innerHTML("grade A");
 } else if (gradeInput < 90 || gradeInput >= 80) {
@@ -55,4 +56,3 @@ if (gradeInput > 90) {
 }
 
 //document.querySelector(tbd).addEventListener('submit', functionnametbd)
-//functiontbd
