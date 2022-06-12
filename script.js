@@ -21,12 +21,21 @@ function renderTable() {
   gradeArray.forEach((grade) => {
     //generate a code block for each grade
     var newRow = document.createElement("tr");
+    newRow.classList.add(rowColor(grade.gradeOutput))
     newRow.innerHTML = `<td>${grade.firstName}</td>
     <td>${grade.lastName}</td>
     <td>${grade.gradeOutput}</td>`;
     //append it to the gradesTable
-    gradesTable.appendChild(newRow)
+    gradesTable.appendChild(newRow);
   });
+}
+
+function rowColor(grade) {
+  if (grade >= 90) {
+    return "green";
+  } else if (grade >= 80) {
+    return "yellow";
+  }
 }
 
 renderTable();
