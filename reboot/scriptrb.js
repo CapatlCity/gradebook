@@ -54,11 +54,10 @@ function rowColor(grade) {
     return "orange";
   } else if (grade <= 70) {
     return "red";
-  } else (grade <= 59) {
+  } else (grade <= 59); 
     return "brown";
   }
 
-}
 
 renderTable();
 
