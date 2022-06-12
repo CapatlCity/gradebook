@@ -1,101 +1,73 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>HTML5 Template</title>
-		<link href="stylesheet.css" rel="stylesheet" />
+		<title>GoldStandard Online Gradebook reboot</title>
+		<link href="stylerb.css" rel="stylesheet" />
 	</head>
-
 	<body>
 		<div id="wrapper">
-		<!-- Page header contains branding information-->
+		<!-- Page header should only be named HEADER and should contain branding-->
 		<header>
-			<img src="pix/headerlogo.png" alt="">
-			SITE TITLE HERE
+			GoldStandard Online GradeBook
 		</header>
-
 		<div class="flexcontainer">
-		<!-- Main navigation bar-->
+		<!-- used code from earlier project to style navigation bar-->
 		<nav>
 			<a href="#">Home</a>
-			<a href="#">Page 1</a>
-			<a href="#">Page 2</a>
-			<a href="#">Page 3</a>
-			<a href="#">Page 4</a>
+			<a href="#">Contact</a>
+			<a href="#">About</a>
+			<a href="#">Free Online Calculator</a>
 		</nav>
-
-<!-- Article is the main content, story, or an article -->
+<!-- need to use article tag with flexbox nav bar -->
 <article>
-<h1>Sample h1 Heading</h1>
+  <br>
+  <br>
+<h1>Welcome!</h1>
+<br>
 	<p> 
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore 
-		et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-		ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore  
-		eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, in culpa qui officia deserunt 
-		mollit anim id est laborum
-	</p>
-	<h2>Sample h2 Heading</h2>
-	<ul>
-		<li>List item one</li>
-		<li>List item two</li>
-		<li>List item three</li>
-	</ul>
-<div class="centerall">
-		<img src="pix/cheer.png" class="raised" style="width: 250px; padding: 10px;" alt="Cheer" />
-		<p>
-			Paragraph with a
-			<a href="http://www.w3.org/">sample link</a> 
-			to test link styles
-		</p>
-	<!-- Play a video slideshow-->
-	<video controls>
-		<source src="pix/slideshow.mp4" type="video/mp4"/>
-		<source src="pix/slideshow.ogv" type="video/ogg"/>
-		<source src="pix/slideshow.webm" type="video/webm"/>
-		Sorry, your browser does not support HTML5 video.
-	</video>
-	<!--Background music autoplay as suggested in assignment not supported by Google Chrome as of April 8 2022-->
-	<audio controls loop>
-		<source src="pix/landofpeace.mp3" type="audio/mp3" />
-		<source src="pix/landofpeace.ogg" type="audio/ogg"/>
-		<br>Sorry, your browser doesn't play mp3 or ogg videos. Consider updating your browser.<br>
-	</audio>
-</div><!-- End centering div -->
+		This is a free virtual grade book application allowing instructors at every level to submit a students first name, last name, and test score. 
+    We will convert your students' scores into letter grades for fast and easy record-keeping!
 
-<!--Start table-->
+	</p>
+	<h2>Grade Guideline</h2>
+	<ul>
+		<li>Grade A Score Range: 100-90</li>
+		<li>Grade B Score Range: 89-80</li>
+		<li>Grade C Score Range: 79-70</li>
+    <li>Grade D Score Range: 69-60</li>
+    <li>Grade F Score Range: 59-0</li>
+  </ul>
+<div class="centerall">
+
+<!--Grade table-->
 <table>
-<!--First row is header cells-->
+<!--First header row-->
 	<tr>
-		<th>House Salad</th>
-		<th>Price</th>
-		<th>Vegan</th>
+		<th>First  </th>
+		<th>Last  </th>
+		<th>Grade</th>
 	</tr>
-	<!--Row 2-->
+	<!--second row populates first line of student info-->
 	<tr>
-		<td>Chef Special</td>
-		<td>$8.50</td>
-		<td><img src="pix/check.png" alt="vegan" /></td>
+		<td>Arthur</td>
+		<td>Aardvark</td>
+		<td>95 - Appears as Grade A</td>
 	</tr>
-	<!--Row 3-->	
+	<!--Row 3 is second line of student info - should auto generate-->	
 	<tr>
-		<td>Cobb</td>
-		<td>$9.00</td> 
-		<td></td>
+		<td>Billy</td>
+		<td>Billington</td> 
+		<td>82 - Appears as Grade B</td>
 	</tr>
 	<!--Row 4-->
 	<tr> 
-		<td>Summer Greens</td>
-		<td>$10.00</td>
-		<td><img src="pix/check.png" alt="vegan" /></td>
+		<td>Chuckie</td>
+		<td>Cheese</td>
+		<td>78 - Appears as Grade C</td>
 	</tr>
 	</table><!--End table-->
 		
-</article><!-- End main article --> 
-
-<!-- Start of third column (aside)-->
-	<aside> 
-		<img src="pix/under_con.png" alt="Under construction">
-		This is the third column. It is an aside.
-	</aside>
+</article>
 
 	</div><!--End of flex container-->
 	<!-- Footer section at page bottom -->

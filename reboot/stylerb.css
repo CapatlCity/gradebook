@@ -1,12 +1,9 @@
 body {
-  background: linear-gradient(#ffc371, #ff5f6d) fixed;
-  /* Default font styling */
-  background-image: url(pix/misty.jpg);
-  background-repeat: no-repeat;
+  background: linear-gradient(#f1cc96, #f3bb03e4) fixed;
   background-size: cover;
   background-attachment: fixed;
-  font: 10pt Arial, Helvetica, Sans-Serif;
-  color: #5d3f25;
+  font: 12pt Tahoma, Helvetica, Sans-Serif;
+  color: #7b027d;
   margin: 0;
 }
 
@@ -37,7 +34,7 @@ header img {
   vertical-align: middle;
 }
 
-/* Styling for the navbar */
+/* Styling for the navbar from April project to move to the left */
 .flexcontainer {
   display: flex;
 }
@@ -45,6 +42,7 @@ nav {
   background-color: #a48362;
   width: 200px;
 }
+/* make sure text color in nav doesn't revert to hideous blue again */
 nav a {
   display: block;
   width: 150px;
@@ -52,6 +50,7 @@ nav a {
   padding: 10px 0;
   text-decoration: none;
   font-size: 125%;
+  color: #7b027d;
   border-bottom: solid 1px #bc9f81;
 }
 
@@ -60,7 +59,6 @@ article {
   padding: 0 10px;
 }
 
-/* Styling for page footer */
 footer {
   background-color: #a48362;
   border-bottom-left-radius: 3px;
@@ -68,8 +66,7 @@ footer {
   text-align: center;
   padding: 8px 0;
 }
-
-/* Eliminates default margins for all heading types*/
+/* edit margin defaults for all heading types*/
 h1,
 h2,
 h3,
@@ -79,119 +76,57 @@ h6 {
   margin: 0;
 }
 
-/* Style for h1 headings */
+/* remember to add shadows to table and content div for depth */
 h1 {
-  font: italic small-caps bold 24px Arial Black, Gadget, Sans-Serif;
+  font: italic small-caps bold 24px Tahoma Black, Gadget, Sans-Serif;
   text-shadow: -2px -2px 2px #a48362;
   text-align: center;
 }
-/* Style for h2 headings */
+
 h2 {
-  font: italic small-caps bold 18px Arial Black, Gadget, Sans-Serif;
+  font: italic small-caps bold 18px Tahoma Black, Gadget, Sans-Serif;
   text-shadow: -1px -1px 1px #a48362;
 }
-/* Style for paragraphs */
+
 p {
   line-height: 1.5;
   margin-top: 0;
 }
 
-/* === Style classes === */
-/* Highlight any span of text */
-.hilite {
-  background-color: yellow;
-}
-/* Create raised appearance with border, rounded corners, and shadow */
-/* Works with images, tables, and block elements (div, p, and headings) */
 .raised {
   border: solid 1px gray;
   border-radius: 5px;
   box-shadow: 5px 5px 5px gray;
 }
-/* Image floating to the left of neighboring text */
-img.left {
-  float: left;
-  width: 30%;
-  margin-right: 10px;
-}
-/* Image floating to the right of neighboring text */
-img.right {
-  float: right;
-  width: 30%;
-  margin-left: 10px;
-}
-/* Use class="centerall" in p or div to center
-   all text and images inside the element */
+
+/* try to use class="centerall" in p or div to center
+   bulletlist and grades table */
 .centerall {
   text-align: center; /* Clear any floating elements */
   clear: both;
 }
-/* ==== Styles for links and link states. === */
-/* Unvisited links */
-a:link {
-  color: #0c391c;
-}
-/* Visited links */
-a:visited {
-  color: #af4600;
-}
-/* Mouse pointer on link */
-a:hover {
-  background-color: #bc9f81;
-  color: #1e2953;
-}
-/* Mouse pointer on link and left button down */
-a:active {
-  background-color: #1e2953;
-  color: #bc9f81;
-}
-/* ==== Styling for tables ==== */
-/* Styling for the table as a whole */
 
 table {
-  /* Remove gapes between table cells */
-  border-collapse: collapse;
-  /* Font size, family, and color */
-  font: 12pt Times, "Times New Roman", Serif;
+  font: 12pt Tahoma;
   color: #4c2e16;
-  /* top/bottom and side margins (auto for centering */
-  margin: 1em auto;
+  margin: 5em auto;
 }
 /* Table header cells */
 th {
-  background-color: #4c2e16;
+  background-color: #7b027d;
   color: white;
+  text-align: center;
+  padding-right: 10em;
 }
 /* Header and data cells */
 th,
 td {
-  border: solid 1px #5d3f25;
-  padding: 2px 4px;
+  border: solid 1px #7b027d;
+  padding: 10px 4px;
 }
-/* Give even-numbered rows tan background color */
-tr:nth-child(even) {
-  background-color: #c6a586;
-}
-/* Right align content in column 2 data cells */
-td:nth-child(3) {
-  text-align: center;
-}
+
 /* Highlight table row on hover */
 tr:hover {
   background-color: #ff6;
   cursor: default;
-}
-/* Third column, on the right */
-aside {
-  border-left: solid 1px #a48362;
-  padding: 8px;
-  background-color: #a48362;
-  text-emphasis-color: white;
-}
-
-/* Images inside the aside div */
-aside img {
-  display: block;
-  width: 140px;
-  margin: 10px auto;
 }
