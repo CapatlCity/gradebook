@@ -11,7 +11,7 @@
 			GoldStandard Online GradeBook
 		</header>
 		<div class="flexcontainer">
-		<!-- used code from earlier project to style navigation bar-->
+		<!-- used code from earlier project to style navigation bar as a side column-->
 		<nav>
 			<a href="#">Home</a>
 			<a href="#">Contact</a>
@@ -29,7 +29,7 @@
     We will convert your students' scores into letter grades for fast and easy record-keeping!
 
 	</p>
-	<h2>Grade Guideline</h2>
+	<h2>Grade Guideline</h2> <!--center this in CSS-->
 	<ul>
 		<li>Grade A Score Range: 100-90</li>
 		<li>Grade B Score Range: 89-80</li>
@@ -37,7 +37,21 @@
     <li>Grade D Score Range: 69-60</li>
     <li>Grade F Score Range: 59-0</li>
   </ul>
-<div class="centerall">
+  
+  <div class="centerall">
+
+  <div id="formcontainer"> <!--center this in CSS-->
+    <form id="inputForm">
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname" /><br /><br />
+      <label for="lname">Last name:</label>
+      <input type="text" id="lname" name="lname" /><br /><br />
+      <label for="gradeInput">Grade:</label>
+      <input type="number" id="grade" name="Grade" /><br />
+      <br />
+      <input type="submit" value="Submit" />
+    </form>
+  </div>
 
 <!--Grade table-->
 <table>
@@ -65,14 +79,14 @@
 		<td>Cheese</td>
 		<td>78 - Appears as Grade C</td>
 	</tr>
-	</table><!--End table-->
+	</table>
 		
 </article>
 
-	</div><!--End of flex container-->
+	</div>
 	<!-- Footer section at page bottom -->
 	<footer> © 2021, Jillian Wells</footer>
-	</div> <!--End wrapper -->
+	</div> <!--End wrapper for main page centering etc-->
 </body>
 
 </html>

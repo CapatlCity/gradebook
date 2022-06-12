@@ -7,7 +7,6 @@ body {
   margin: 0;
 }
 
-/* Style rule for the wrapper div */
 #wrapper {
   width: 90%;
   min-width: 600px;
@@ -20,7 +19,6 @@ body {
   border-radius: 3px;
 }
 
-/* Styling for page header */
 header {
   background-color: #a48362;
   border-top-left-radius: 3px;
@@ -53,8 +51,6 @@ nav a {
   color: #7b027d;
   border-bottom: solid 1px #bc9f81;
 }
-
-/* Styling for the main article section */
 article {
   padding: 0 10px;
 }
@@ -66,7 +62,7 @@ footer {
   text-align: center;
   padding: 8px 0;
 }
-/* edit margin defaults for all heading types*/
+/* edit margin defaults for all heading types to prevent excessive element width from previous app*/
 h1,
 h2,
 h3,
@@ -99,10 +95,11 @@ p {
   box-shadow: 5px 5px 5px gray;
 }
 
-/* try to use class="centerall" in p or div to center
+/* attempt to use class="centerall" trick from April class in p or div to center
    bulletlist and grades table */
+   
 .centerall {
-  text-align: center; /* Clear any floating elements */
+  text-align: center; 
   clear: both;
 }
 
@@ -111,22 +108,18 @@ table {
   color: #4c2e16;
   margin: 5em auto;
 }
-/* Table header cells */
+
 th {
   background-color: #7b027d;
   color: white;
   text-align: center;
   padding-right: 10em;
 }
-/* Header and data cells */
+
 th,
 td {
   border: solid 1px #7b027d;
   padding: 10px 4px;
 }
 
-/* Highlight table row on hover */
-tr:hover {
-  background-color: #ff6;
-  cursor: default;
-}
+
