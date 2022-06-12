@@ -115,9 +115,9 @@ td {
 /* REMEMBER: elements that are meant to change color on an event 
 must be styled for that event in CSS! The event coding happens in JS */
 
-/* colors for table grade post calculation. use CLASSES per Jude*/
+/* colors for table grade post calculation. use CLASSES per JC */
 .green {
-  background-color: green
+  background-color: green;
 }
 .yellow {
   background-color: yellow;
