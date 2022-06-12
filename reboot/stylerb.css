@@ -55,20 +55,9 @@ article {
   padding: 0 10px;
 }
 
-footer {
-  background-color: #a48362;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
-  text-align: center;
-  padding: 8px 0;
-}
-/* edit margin defaults for all heading types to prevent excessive element width from previous app*/
+/* edit margin defaults for headings to prevent excessive element width from previous app*/
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2 {
   margin: 0;
 }
 
@@ -97,18 +86,20 @@ p {
 
 /* attempt to use class="centerall" trick from April class in p or div to center
    bulletlist and grades table */
-   
+
 .centerall {
-  text-align: center; 
+  text-align: center;
   clear: both;
 }
+
+/* #formcontainer{} omitted to fit new floating div*/
 
 table {
   font: 12pt Tahoma;
   color: #4c2e16;
   margin: 5em auto;
 }
-
+/* table border styles from main omitted for aesthetics*/
 th {
   background-color: #7b027d;
   color: white;
@@ -121,5 +112,31 @@ td {
   border: solid 1px #7b027d;
   padding: 10px 4px;
 }
+/* REMEMBER: elements that are meant to change color on an event 
+must be styled for that event in CSS! The event coding happens in JS */
 
+/* colors for table grade post calculation. use CLASSES per Jude*/
+.green {
+  background-color: green
+}
+.yellow {
+  background-color: yellow;
+}
+.orange {
+  background-color: orangered;
+}
 
+.red {
+  background-color: red;
+}
+.brown {
+  background-color: #b4601c;
+}
+
+footer {
+  background-color: #a48362;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  text-align: center;
+  padding: 8px 0;
+}
