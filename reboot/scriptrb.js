@@ -16,10 +16,10 @@ inputForm.addEventListener("submit", (event) => {
 });
 
 var gradeArray = [
-  { firstName: "Arthur", lastName: "Aardvark", gradeOutput: 75 },
-  { firstName: "Billy", lastName: "Billington", gradeOutput: 75 },
-  { firstName: "Chuckie", lastName: "Cheese", gradeOutput: 75 },
-  { firstName: "Deb", lastName: "ONair", gradeOutput: 75 },
+  { firstName: "Arthur", lastName: "Aardvark", gradeOutput: 95 },
+  { firstName: "Billy", lastName: "Billington", gradeOutput: 95 },
+  { firstName: "Chuckie", lastName: "Cheese", gradeOutput: 95 },
+  { firstName: "Deb", lastName: "ONair", gradeOutput: 95 },
 ];
 
 // step 1: create new row//
@@ -47,11 +47,11 @@ function renderTable() {
 function rowColor(grade) {
   if (grade >= 90) {
     return "green";
-  } else if (grade <= 90 || grade >= 80) {
+  } else if (grade <= 90 && grade >= 80) {
     return "yellow";
-  } else if (grade <= 80 || grade >= 70) {
+  } else if (grade <= 80 && grade >= 70) {
     return "orange";
-  } else if (grade <= 70 || grade >= 60) {
+  } else if (grade <= 70 && grade >= 60) {
     return "red";
   } else grade <= 59;
   return "brown";

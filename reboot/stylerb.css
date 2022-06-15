@@ -127,7 +127,7 @@ must be styled for that event in CSS! The event coding happens in JS */
 }
 
 .red {
-  background-color: red;
+  background-color: rgb(156, 6, 6);
 }
 .brown {
   background-color: #b4601c;

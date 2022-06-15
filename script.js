@@ -12,16 +12,16 @@ inputForm.addEventListener("submit", (event) => {
 });
 
 var gradeArray = [
-  { firstName: "Dan", lastName: "Rosenbaum", gradeOutput: 78 },
+  { firstName: "Dan", lastName: "Rosenbaum", gradeOutput: 95 },
   { firstName: "Deb", lastName: "ONair", gradeOutput: 95 },
-  { firstName: "Jane", lastName: "Doe", gradeOutput: 80 },
+  { firstName: "Jane", lastName: "Doe", gradeOutput: 95 },
 ];
 
 function renderTable() {
   gradeArray.forEach((grade) => {
     //generate a code block for each grade
     var newRow = document.createElement("tr");
-    newRow.classList.add(rowColor(grade.gradeOutput))
+    newRow.classList.add(rowColor(grade.gradeOutput));
     newRow.innerHTML = `<td>${grade.firstName}</td>
     <td>${grade.lastName}</td>
     <td>${grade.gradeOutput}</td>`;
