@@ -1,70 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GoldStandard Online GradeBook</title>
-    <!--Branding for tab-->
-    <link rel="stylesheet" href="./style.css" />
+    <title>GoldStandard Online Gradebook reboot</title>
+    <link href="stylerb.css" rel="stylesheet" />
   </head>
   <body>
-    <heading>Welcome to the GoldStandard Online GradeBook</heading>
-    <!--need to add logo-->
-    <nav>
-      MENU
-      <ul>
-        <li><a href="default.asp">Home</a></li>
-        <li><a href="contact.asp">Contact</a></li>
-        <li><a href="about.asp">About</a></li>
-      </ul>
-    </nav>
-    <!--add real links to include free online calculator and use flexbox per HTML cert project-->
-    <br />
-    <div id="formcontainer">
-      <form id="inputForm">
-        <label for="fname">First name:</label>
-        <input type="text" id="fname" name="fname" /><br /><br />
-        <label for="lname">Last name:</label>
-        <input type="text" id="lname" name="lname" /><br /><br />
-        <label for="gradeInput">Grade:</label>
-        <input type="number" id="grade" name="Grade" /><br />
-        <br />
-        <input type="submit" value="Submit" />
-      </form>
-    </div>
+    <div id="wrapper">
+      <!-- Page header should only be named HEADER and should contain branding-->
+      <header>GoldStandard Online GradeBook</header>
+      <div class="flexcontainer">
+        <!-- used code from earlier project to style navigation bar as a side column-->
+        <nav>
+          <a href="#">Home</a>
+          <a href="#">Contact</a>
+          <a href="#">About</a>
+          <a href="#">Free Online Calculator</a>
+        </nav>
+        <!-- need to use article tag with flexbox nav bar -->
+        <article>
+          <br />
+          <br />
+          <h1>Welcome!</h1>
+          <br />
+          <p>
+            This is a free virtual grade book application allowing instructors
+            at every level to submit a students first name, last name, and test
+            score. We will convert your students' scores into letter grades for
+            fast and easy record-keeping!
+          </p>
+          <h2>Grade Guideline</h2>
+          <!--center this in CSS-->
+          <ul>
+            <li>Grade A Score Range: 100-90</li>
+            <li>Grade B Score Range: 89-80</li>
+            <li>Grade C Score Range: 79-70</li>
+            <li>Grade D Score Range: 69-60</li>
+            <li>Grade F Score Range: 59-0</li>
+          </ul>
 
-    <div id="tablecontainer">
-      <table id="gradesTable">
-        <tr>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Grade</th>
-        </tr>
-        <!-- <tr>
-          <td>Testy</td>
-          <td>McTester</td>
-          <td>51</td>
-        </tr> -->
-       <!--maybe insert the javascript nodes here to input data June 5-->
-        
-      </table>
+          <div class="centerall">
+            <div id="formcontainer">
+              <!--center this using the center all div-->
+              <form id="inputForm">
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname" /><br /><br />
+                <label for="lname">Last name:</label>
+                <input type="text" id="lname" name="lname" /><br /><br />
+                <label for="gradeInput">Grade:</label>
+                <input type="number" id="grade" name="Grade" /><br />
+                <br />
+                <input type="submit" value="Submit" />
+              </form>
+            </div>
+
+            <!--Grade table div-->
+            <div id="tableContainer">
+              <table id="gradesTable">
+                <!--First header row-->
+                <tr>
+                  <th>First</th>
+                  <th>Last</th>
+                  <th>Grade</th>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </article>
+      </div>
+      <footer>© 2021, Jillian Wells</footer>
     </div>
-    <script src="./script.js"></script>
+    <!--End wrapper for main page centering etc-->
+    <script src="./scriptrb.js"></script>
   </body>
 </html>
-<!-- EXAMPLE OF FORM INPUT RESULTING IN RETURNED OUTPUT ON SAME WEBPAGE7
-            <div class="section">
-                <h2>Part 2: Free Response</h2>
-                <hr>
-                <h3>Which woodland creature is the absolute all-time best?</h3>
-            </div>
-            <div id="shortanswer">
-                <form id="textAnswer">
-                    <input type="text" id="userInput">
-                    <input type="submit" value="Check Answer" id="submit"> 
-                    
-                    <p id="feedback2"></p>
-
-                </form>
-            </div> -->
