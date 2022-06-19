@@ -5,14 +5,22 @@ var inputForm = document.getElementById("inputForm");
 inputForm.addEventListener("submit", (event) => {
   event.preventDefault("submit"); // override default browser reset after "submit"
 
-  var firstName = document.getElementById("fname").value;
+  var firstName = document.getElementById("fname");
+  var lastName = document.getElementById("lname");
+  var gradeOutput = document.getElementById("grade");
 
-  var lastName = document.getElementById("lname").value;
+  const newGrade = {
+    firstName: firstName.value.trim(),
+    lastName: lastName.value.trim(),
+    gradeOutput: gradeOutput.value.trim(),
+  };
+  gradeArray.push(newGrade);
 
-  var grade = document.getElementById("grade").value;
-  console.log(firstName);
-  console.log(lastName);
-  console.log(grade);
+  firstName.value = "";
+  lastName.value = "";
+  gradeOutput.value = "";
+
+  renderTable();
 });
 
 var gradeArray = [
@@ -24,9 +32,35 @@ var gradeArray = [
 
 // step 1: create new row//
 function renderTable() {
+  //clear the table
+  gradesTable.innerHTML = "";
+
+  //generate new table
+
+  //create TR
+  const headerRow = document.createElement("tr");
+
+  //create 'First' th and append to headerRow
+  const first = document.createElement("th");
+  first.innerText = "First";
+  headerRow.appendChild(first);
+
+  //create 'Last' th and append to headerRow
+  const last = document.createElement("th");
+  last.innerText = "Last";
+  headerRow.appendChild(last);
+
+  //create 'Grade' th and append to headerRow
+  const grade = document.createElement("th");
+  grade.innerText = "Grade";
+  headerRow.appendChild(grade);
+
+  //append headerRow onto the page, inside the gradesTable so that it is visible
+  gradesTable.appendChild(headerRow);
+
   gradeArray.forEach((grade) => {
     //generate a code block for each grade
-    var newRow = document.createElement("tr"); // review use of ` and practice functions! //
+    var newRow = document.createElement("tr"); // review use of `template literal (string concatenation) and practice functions! //
     //this function is  is what creates new table rows//
     newRow.classList.add(rowColor(grade.gradeOutput));
 
@@ -58,21 +92,3 @@ function rowColor(grade) {
 }
 
 renderTable();
-
-const gradeInput = document.getElementById("grade").value;
-
-if (gradeInput > 90) {
-  TextDecoder.innerHTML("grade A");
-} else if (gradeInput < 90 || gradeInput >= 80) {
-  console.log("grade B)");
-} else if (gradeInput < 80 || gradeInput >= 70) {
-  console.log("grade C");
-} else if (gradeInput < 70 || gradeInput >= 60) {
-  console.log("grade D");
-} else if (gradeInput < 60) {
-  console.log("grade F");
-} else {
-  console.log("try again");
-}
-
-//document.querySelector(tbd).addEventListener('submit', functionnametbd)
