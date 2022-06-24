@@ -32,9 +32,7 @@ var gradeArray = [
 
 // step 1: create new row//
 function renderTable() {
-  
   gradesTable.innerHTML = "";
-
 
   //create TR
   const headerRow = document.createElement("tr");
@@ -93,20 +91,15 @@ function rowColor(grade) {
 renderTable();
 
 //to do - add delete buttton, and save info to page upon refresh//
-// 
-//create function that deletes the new appended row 
+//
+//create function that deletes the new appended row
 //without removing the entire table!
 
-/*inputForm.addEventListener("reset", (event) => {
-  event.preventDefault("reset"); 
+/* const e = document.querySelector("gradesTable:newRow");
 
-  const e = document.querySelector("gradesTable:newRow");
-  e.parentElement.removeChild(e);
+  btn-primary.addEventListener("submit", (event) => {
+    event.preventDefault("submit"); 
+    e.parentElement.removeChild(e);
 
-    function deleteRow() 
-  alert("The form was reset");
-
-)} */ 
-
-
-
+    function deleteRow(e);
+  alert("The form was reset"); */
