@@ -32,10 +32,9 @@ var gradeArray = [
 
 // step 1: create new row//
 function renderTable() {
-  //clear the table
+  
   gradesTable.innerHTML = "";
 
-  //generate new table
 
   //create TR
   const headerRow = document.createElement("tr");
@@ -61,7 +60,7 @@ function renderTable() {
   gradeArray.forEach((grade) => {
     //generate a code block for each grade
     var newRow = document.createElement("tr"); // review use of `template literal (string concatenation) and practice functions! //
-    //this function is  is what creates new table rows//
+    //this function is what creates new table rows//
     newRow.classList.add(rowColor(grade.gradeOutput));
 
     newRow.innerHTML = `<td>${grade.firstName}</td>   
@@ -94,6 +93,17 @@ function rowColor(grade) {
 renderTable();
 
 //to do - add delete buttton, and save info to page upon refresh//
-// look up localStorage js
-// inputForm.addEventListener("submit", (event) => {
-// event.preventDefault("submit");
+// 
+//create function that deletes the new appended row 
+//without breaking the append row function this time!
+
+inputForm.addEventListener("reset", (event) => {
+  event.preventDefault("reset"); 
+
+  const e = document.querySelector("gradesTable:newRow");
+  e.parentElement.removeChild(e);
+)}
+
+ /* function deleteRow() {
+  alert("The form was reset");
+}
