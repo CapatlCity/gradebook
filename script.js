@@ -95,15 +95,18 @@ renderTable();
 //to do - add delete buttton, and save info to page upon refresh//
 // 
 //create function that deletes the new appended row 
-//without breaking the append row function this time!
+//without removing the entire table!
 
-inputForm.addEventListener("reset", (event) => {
+/*inputForm.addEventListener("reset", (event) => {
   event.preventDefault("reset"); 
 
   const e = document.querySelector("gradesTable:newRow");
   e.parentElement.removeChild(e);
-)}
 
- /* function deleteRow() {
+    function deleteRow() 
   alert("The form was reset");
-}
+
+)} */ 
+
+
+
