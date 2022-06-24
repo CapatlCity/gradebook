@@ -95,3 +95,5 @@ renderTable();
 
 //to do - add delete buttton, and save info to page upon refresh//
 // look up localStorage js
+// inputForm.addEventListener("submit", (event) => {
+// event.preventDefault("submit");
