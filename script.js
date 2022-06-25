@@ -2,6 +2,8 @@ var gradesTable = document.getElementById("gradesTable");
 
 var inputForm = document.getElementById("inputForm");
 
+let nextId = 5;
+
 inputForm.addEventListener("submit", (event) => {
   event.preventDefault("submit"); // override default browser reset after "submit"
 
@@ -10,11 +12,13 @@ inputForm.addEventListener("submit", (event) => {
   var gradeOutput = document.getElementById("grade");
 
   const newGrade = {
+    id: nextId,
     firstName: firstName.value.trim(),
     lastName: lastName.value.trim(),
     gradeOutput: gradeOutput.value.trim(),
   };
   gradeArray.push(newGrade);
+  nextId++;
 
   firstName.value = "";
   lastName.value = "";
@@ -24,10 +28,10 @@ inputForm.addEventListener("submit", (event) => {
 });
 
 var gradeArray = [
-  { firstName: "Arthur", lastName: "Aardvark", gradeOutput: 85 },
-  { firstName: "Billy", lastName: "Billington", gradeOutput: 75 },
-  { firstName: "Chuckie", lastName: "Cheese", gradeOutput: 65 },
-  { firstName: "Deb", lastName: "ONair", gradeOutput: 55 },
+  { id: 1, firstName: "Arthur", lastName: "Aardvark", gradeOutput: 85 },
+  { id: 2, firstName: "Billy", lastName: "Billington", gradeOutput: 75 },
+  { id: 3, firstName: "Chuckie", lastName: "Cheese", gradeOutput: 65 },
+  { id: 4, firstName: "Deb", lastName: "ONair", gradeOutput: 55 },
 ];
 
 // step 1: create new row//
@@ -52,6 +56,11 @@ function renderTable() {
   grade.innerText = "Grade";
   headerRow.appendChild(grade);
 
+  // create delete button column
+  const deleteHeader = document.createElement("th");
+  deleteHeader.innerText = "Delete";
+  headerRow.appendChild(deleteHeader);
+
   //append headerRow onto the page, inside the gradesTable so that it is visible
   gradesTable.appendChild(headerRow);
 
@@ -61,16 +70,36 @@ function renderTable() {
     //this function is what creates new table rows//
     newRow.classList.add(rowColor(grade.gradeOutput));
 
-    newRow.innerHTML = `<td>${grade.firstName}</td>   
+    newRow.innerHTML = `<td>${grade.firstName}</td>
     
     <td>${grade.lastName}</td>
     
-    <td>${grade.gradeOutput}</td>`;
+    <td>${grade.gradeOutput}</td>
+    
+    <td><button data-gradeid=${grade.id} class="delete-btn">Delete</button></td>`;
 
     // must create indvidually animating nodes for each data cell in the row that is intended to appear at the bottom
     // of the gradesTable ie appendages //
     gradesTable.appendChild(newRow);
   });
+
+  const deleteBtnArray = document.querySelectorAll(".delete-btn");
+
+  deleteBtnArray.forEach((btn) => btn.addEventListener("click", deleteGrade));
+}
+
+function deleteGrade(event) {
+  console.log(`clicked on delete ${event.target.dataset.gradeid}`);
+  // filter through the array and remove the grade whose id === event.target.dataset.gradeid
+  const filteredArray = gradeArray.filter(
+    (grade) => grade.id !== parseInt(event.target.dataset.gradeid)
+  );
+
+  // console.log(filteredArray);
+
+  gradeArray = filteredArray;
+
+  renderTable();
 }
 
 //step 2: calculate input and generate a color in the newly animated row//
