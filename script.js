@@ -102,7 +102,7 @@ function deleteGrade(event) {
   renderTable();
 }
 
-//step 2: calculate input and generate a color in the newly animated row//
+//calculate input and generate a color in the newly animated row//
 
 function rowColor(grade) {
   if (grade >= 90) {
@@ -118,17 +118,18 @@ function rowColor(grade) {
 }
 
 renderTable();
+/* use JSON to stringify the gradeArray in order to send it to local browser*/
+const gradeJSON = JSON.stringify(gradeArray);
+localStorage.setItem("testJSON", gradeJSON);
 
-//to do - add delete buttton, and save info to page upon refresh//
-//
-//create function that deletes the new appended row
-//without removing the entire table!
+/* TO DO - either remove Array altogether or have array moved to local storage so
+that when "delete" is clicked and the page refreshed, the corresponding array name and grade data
+do not reappear */
 
-/* const e = document.querySelector("gradesTable:newRow");
-
-  btn-primary.addEventListener("submit", (event) => {
-    event.preventDefault("submit"); 
-    e.parentElement.removeChild(e);
-
-    function deleteRow(e);
-  alert("The form was reset"); */
+/* Steps to finish part 2:
+1. Click a given delete button on webpage, take the corresponding names and grade off of page
+2. Use JS to remove data from gradeArray object
+3. Re-render to data to page
+4. use loop function and an "on click" event listener for the selected delete button
+5. loop function will pull data from page, loop through gradeArray and remove corresponding item from page
+6. add new form input to the array via a "re-render" function */
