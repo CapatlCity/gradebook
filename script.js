@@ -1,5 +1,4 @@
 var gradesTable = document.getElementById("gradesTable");
-
 var inputForm = document.getElementById("inputForm");
 
 let nextId = 5;
@@ -28,13 +27,13 @@ inputForm.addEventListener("submit", (event) => {
 });
 
 var gradeArray = [
-  { id: 1, firstName: "Arthur", lastName: "Aardvark", gradeOutput: 85 },
-  { id: 2, firstName: "Billy", lastName: "Billington", gradeOutput: 75 },
-  { id: 3, firstName: "Chuckie", lastName: "Cheese", gradeOutput: 65 },
-  { id: 4, firstName: "Deb", lastName: "ONair", gradeOutput: 55 },
+  { id: 1, firstName: "Arthur", lastName: "Aardvark", gradeOutput: 95 },
+  { id: 2, firstName: "Billy", lastName: "Billington", gradeOutput: 85 },
+  { id: 3, firstName: "Chuckie", lastName: "Cheese", gradeOutput: 75 },
+  { id: 4, firstName: "Deb", lastName: "ONair", gradeOutput: 65 },
 ];
 
-// step 1: create new row//
+// create new row on Grade Table on webpage//
 function renderTable() {
   gradesTable.innerHTML = "";
 
@@ -87,10 +86,11 @@ function renderTable() {
 
   deleteBtnArray.forEach((btn) => btn.addEventListener("click", deleteGrade));
 }
-
+/*loop function and "on click" event listener for the selected delete button will pull data from page, 
+loop through the gradeArray and remove corresponding items from page */
 function deleteGrade(event) {
   console.log(`clicked on delete ${event.target.dataset.gradeid}`);
-  // filter through the array and remove the grade whose id === event.target.dataset.gradeid
+  // function to filter through the array and remove the grade whose id === event.target.dataset.gradeid
   const filteredArray = gradeArray.filter(
     (grade) => grade.id !== parseInt(event.target.dataset.gradeid)
   );
@@ -118,18 +118,16 @@ function rowColor(grade) {
 }
 
 renderTable();
-/* use JSON to stringify the gradeArray in order to send it to local browser*/
+/*  Click a given delete button on webpage, take the corresponding names and grade 
+off of page, store info locally on browser using JSON to stringify the gradeArray*/
+
 const gradeJSON = JSON.stringify(gradeArray);
 localStorage.setItem("testJSON", gradeJSON);
 
-/* TO DO - either remove Array altogether or have array moved to local storage so
+/* TO DO -  remove 'placholder' info from Array altogether, replace strings with variables or template literal
 that when "delete" is clicked and the page refreshed, the corresponding array name and grade data
 do not reappear */
 
-/* Steps to finish part 2:
-1. Click a given delete button on webpage, take the corresponding names and grade off of page
-2. Use JS to remove data from gradeArray object
-3. Re-render to data to page
-4. use loop function and an "on click" event listener for the selected delete button
-5. loop function will pull data from page, loop through gradeArray and remove corresponding item from page
+/* 2. Re-render to data to page
 6. add new form input to the array via a "re-render" function */
+//
