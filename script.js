@@ -27,8 +27,12 @@ inputForm.addEventListener("submit", (event) => {
 });
 
 var gradeArray = [
-  { id: 1, firstName: "Sample", lastName: "Sampleton", gradeOutput: 85 }
+  { id: 1, firstName: "Sample", lastName: "Sampleton", gradeOutput: 85 },
 ];
+//to do 6:30 july 2 - make event listener wit document.querySelector remove for new row on page refresh
+
+//ex: const infoDeleteRefresh = document.querySelector("tr", "th")
+//         remove(newRow)
 
 // create new row on Grade Table on webpage//
 function renderTable() {
@@ -80,7 +84,6 @@ function renderTable() {
   });
   console.log(gradeArray);
 
-
   const deleteBtnArray = document.querySelectorAll(".delete-btn");
 
   deleteBtnArray.forEach((btn) => btn.addEventListener("click", deleteGrade));
@@ -123,11 +126,12 @@ off of page, store info locally on browser using JSON to stringify the gradeArra
 const gradeJSON = JSON.stringify(gradeArray);
 localStorage.setItem("testJSON", gradeJSON);
 
-/* MUST DO -  make the appearance of the Grade Table on the UI independent of gradeArray by either
+/* Is it possible to make the appearance of the Grade Table on the UI independent of gradeArray by either
 
+(1)  make one TH row active in HTML, delete all except one gradeArray row KEEP AS A SAMPLE for user guidance
+(2)  use localStorage Object to facilitate re rendering
+(3)  6:30 july 2 - make event listener with document.querysel to remove new input row from table on page refresh
 
-(3)  make one TH row active in HTML, delete all except one gradeArray row KEEP AS A SAMPLE for user guidance
-(4) keep steps from option then use localStorage Object to facilitate re rendering (in progress 7/1/2022)
 
 
 /* 2. Re-render to data to page and add new form input to the array via a "re-render" function */
