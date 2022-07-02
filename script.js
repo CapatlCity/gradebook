@@ -26,24 +26,8 @@ inputForm.addEventListener("submit", (event) => {
   renderTable();
 });
 
-var gradeArray = [,
-  { id: 1, firstName: "Billy", lastName: "Billington", gradeOutput: 85 },
-  { id: 2, firstName: "Chuckie", lastName: "Cheese", gradeOutput: 75 },
-  { id: 3, firstName: "Deb", lastName: "ONair", gradeOutput: 65 }
-  
-  ,/* gradeArray.forEach((grade) => {
-    //generate a code block for each grade
-    var newRow = document.createElement("tr"); // review use of `template literal (string concatenation) and practice functions! //
-    //this function is what creates new table rows//
-    newRow.classList.add(rowColor(grade.gradeOutput));
-
-    newRow.innerHTML = `<td>${grade.firstName}</td>
-    
-    <td>${grade.lastName}</td>
-    
-    <td>${grade.gradeOutput}</td>
-    
-    <td><button data-gradeid=${grade.id} class="delete-btn">Delete</button></td>`;*/
+var gradeArray = [
+  { id: 1, firstName: "Sample", lastName: "Sampleton", gradeOutput: 85 }
 ];
 
 // create new row on Grade Table on webpage//
@@ -94,6 +78,8 @@ function renderTable() {
     // of the gradesTable ie appendages //
     gradesTable.appendChild(newRow);
   });
+  console.log(gradeArray);
+
 
   const deleteBtnArray = document.querySelectorAll(".delete-btn");
 
@@ -140,14 +126,13 @@ localStorage.setItem("testJSON", gradeJSON);
 /* MUST DO -  make the appearance of the Grade Table on the UI independent of gradeArray by either
 (1) (FAILED) delete placeholder strings, keep variables firstName, lastName, gradeArray for line 1
 (2) (FAILED) replace placeholder string (ex. Deb ONair, et al) with template literals and variables
-(3)  replace strings with variables
-that when "delete" is clicked and the page refreshed, the corresponding array name and grade data
-do not reappear */
 
-/* 2. Re-render to data to page
-6. add new form input to the array via a "re-render" function */
-//
+(3)  make one TH row active in HTML, delete all except one gradeArray row KEEP AS A SAMPLE for user guidance
+(4) keep steps from option (3), then use localStorage Object to facilitate re rendering
+
+
+/* 2. Re-render to data to page and add new form input to the array via a "re-render" function */
 
 /* DO NOT do this to array:   
 { id: 1, firstName: `${grade.firstName}`, lastName: `${grade.lastName}`, gradeOutput: `${grade.gradeOutput}`}
-*/ 
+*/
