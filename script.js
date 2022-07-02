@@ -94,7 +94,7 @@ function deleteGrade(event) {
     (grade) => grade.id !== parseInt(event.target.dataset.gradeid)
   );
 
-  // console.log(filteredArray);
+  console.log(filteredArray);
 
   gradeArray = filteredArray;
 
@@ -124,15 +124,17 @@ const gradeJSON = JSON.stringify(gradeArray);
 localStorage.setItem("testJSON", gradeJSON);
 
 /* MUST DO -  make the appearance of the Grade Table on the UI independent of gradeArray by either
-(1) (FAILED) delete placeholder strings, keep variables firstName, lastName, gradeArray for line 1
-(2) (FAILED) replace placeholder string (ex. Deb ONair, et al) with template literals and variables
+
 
 (3)  make one TH row active in HTML, delete all except one gradeArray row KEEP AS A SAMPLE for user guidance
-(4) keep steps from option (3), then use localStorage Object to facilitate re rendering
+(4) keep steps from option then use localStorage Object to facilitate re rendering (in progress 7/1/2022)
 
 
 /* 2. Re-render to data to page and add new form input to the array via a "re-render" function */
 
 /* DO NOT do this to array:   
 { id: 1, firstName: `${grade.firstName}`, lastName: `${grade.lastName}`, gradeOutput: `${grade.gradeOutput}`}
+DO NOT:
+(1) (FAILED) delete placeholder strings, keep variables firstName, lastName, gradeArray for line 1
+(2) (FAILED) replace placeholder string (ex. Deb ONair, et al) with template literals and variables
 */
