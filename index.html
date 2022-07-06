@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>GoldStandard Online Gradebook - Home</title>
+    <title>Assignments - GoldStandard Online Gradebook</title>
     <link href="./style.css" rel="stylesheet" />
   </head>
   <body>
@@ -9,88 +9,39 @@
       <header>GoldStandard Online GradeBook</header>
       <div class="flexcontainer">
         <nav>
-          <a href="index.html">Home</a>
+          <a href="index.html">Assignments</a>
+          <a href="converter.html">Converter</a>
           <a href="contact.html">Contact</a>
-          <a href="assignments.html">Assignments</a>
-          <a href="https://www.online-calculator.com/"
-            >Free Online Calculator</a
-          >
+          <a href="https://www.online-calculator.com/">Free Online Calculator</a>
         </nav>
-        <!-- need to use article tag with flexbox nav bar -->
         <article>
           <br />
           <br />
-          <h1>Welcome!</h1>
-          <br />
-          <p>
-            This is a free virtual grade book application allowing instructors
-            at every level to submit a students first name, last name, and test
-            score. We will convert your students' scores into letter grades for
-            fast and easy record-keeping!
-          </p>
-          <h2>Grade Guideline</h2>
-          <!--center this in CSS-->
-          <ul>
-            <li>Grade A Score Range: 100-90</li>
-            <li>Grade B Score Range: 89-80</li>
-            <li>Grade C Score Range: 79-70</li>
-            <li>Grade D Score Range: 69-60</li>
-            <li>Grade F Score Range: 59-0</li>
-          </ul>
-
-          <div class="centerall">
-            <div id="formcontainer">
-              <form id="inputForm">
-                <label for="assignment">Assignment Name: </label>
-                <input
-                  type="text"
-                  id="assignment"
-                  name="assignment"
-                /><br /><br />
-                <label for="fname">First name:</label>
-                <input
-                  type="text"
-                  id="fname"
-                  name="fname"
-                  required
-                /><br /><br />
-                <label for="lname">Last name:</label>
-                <input
-                  type="text"
-                  id="lname"
-                  name="lname"
-                  required
-                /><br /><br />
-                <label for="gradeInput">Grade:</label>
-                <input
-                  type="number"
-                  id="grade"
-                  name="Grade"
-                  min="0"
-                  max="100"
-                  required
-                /><br />
-                <br />
-                <input type="submit" value="Submit" />
-              </form>
-            </div>
-
-            <!--Grade table div-->
-            <div id="tableContainer">
-              <table id="gradesTable">
-                <tr>
-                  <th>First</th>
-                  <th>Last</th>
-                  <th>Grade</th>
-                </tr>
-              </table>
-            </div>
-          </div>
-        </article>
-      </div>
+          <h1>Assignments</h1>
+            <p>
+                This is a free virtual grade book application allowing instructors at 
+                every level to submit a students first name, last name, and test score, 
+                track and sort grades, and help measure student performance by assignments. 
+                We will convert your students' scores into letter grades for fast and easy
+                record-keeping!
+               <ul> 
+                <h2>Assignments</h2>
+                <br>
+                <br>
+                <li>Grade A Score Range: 100-90</li>
+                <li>Grade B Score Range: 89-80</li>
+                <li>Grade C Score Range: 79-70</li>
+                <li>Grade D Score Range: 69-60</li>
+                <li>Grade F Score Range: 59-0  </li>
+            </ul>
+            </p>
+        <br>
+       </article>
       <footer>© 2021, Jillian Wells</footer>
     </div>
-    <!--End wrapper for main page centering etc-->
+    </div>
     <script src="./script.js"></script>
   </body>
 </html>
+
+

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Converter - GoldStandard Online Gradebook</title>
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>GoldStandard Online GradeBook - Converter</header>
+      <div class="flexcontainer">
+        <nav>
+          <a href="index.html">Assignments</a>
+          <a href="converter.html">Converter</a>
+          <a href="contact.html">Contact</a>
+          <a href="https://www.online-calculator.com/"
+            >Free Online Calculator</a
+          >
+        </nav>
+        <!-- need to use article tag with flexbox nav bar -->
+        <article>
+          <br />
+          <br />
+          <h1>Numerical Grade Converter</h1>
+          <br />
+          <p>
+            Enter in a student's first name and numerical grade for a given
+            asignment using the form below.
+          </p>
+          <h2>Grade Guideline</h2>
+          <!--center this in CSS-->
+          <ul>
+            <li>Grade A Score Range: 100-90</li>
+            <li>Grade B Score Range: 89-80</li>
+            <li>Grade C Score Range: 79-70</li>
+            <li>Grade D Score Range: 69-60</li>
+            <li>Grade F Score Range: 59-0</li>
+          </ul>
+
+          <div class="centerall">
+            <div id="formcontainer">
+              <form id="inputForm">
+                <label for="assignment">Assignment Name: </label>
+                <input
+                  type="text"
+                  id="assignment"
+                  name="assignment"
+                /><br /><br />
+                <label for="fname">First name:</label>
+                <input
+                  type="text"
+                  id="fname"
+                  name="fname"
+                  required
+                /><br /><br />
+                <label for="lname">Last name:</label>
+                <input
+                  type="text"
+                  id="lname"
+                  name="lname"
+                  required
+                /><br /><br />
+                <label for="gradeInput">Grade:</label>
+                <input
+                  type="number"
+                  id="grade"
+                  name="Grade"
+                  min="0"
+                  max="100"
+                  required
+                /><br />
+                <br />
+                <input type="submit" value="Submit" />
+              </form>
+            </div>
+
+            <!--Grade table div-->
+            <div id="tableContainer">
+              <table id="gradesTable">
+                <tr>
+                  <th>First</th>
+                  <th>Last</th>
+                  <th>Grade</th>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </article>
+      </div>
+      <footer>© 2021, Jillian Wells</footer>
+    </div>
+    <!--End wrapper for main page centering etc-->
+    <script src="./script.js"></script>
+  </body>
+</html>
