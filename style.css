@@ -68,7 +68,7 @@ h1 {
   text-align: center;
 }
 
-h2 {
+h2, h3, h4 {
   font: italic small-caps bold 18px Tahoma Black, Gadget, Sans-Serif;
   text-shadow: -1px -1px 1px #a48362;
 }
