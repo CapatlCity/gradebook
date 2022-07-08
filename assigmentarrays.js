@@ -1,31 +1,24 @@
 // not an active script as of July 8
 
-var gradesTable = document.getElementById("gradesTable");
-var inputForm = document.getElementById("inputForm");
+var assignmentForm = document.getElementById("assignment");
 
-let nextId = 5;
-
-inputForm.addEventListener("submit", (event) => {
+assignmentForm.addEventListener("submit", (event) => {
   event.preventDefault("submit"); // override default browser reset after "submit"
 
-
-  var gradeOutput = document.getElementById("grade");
-
-  const newGrade = {
+  const assignmentAdd = {
     id: nextId,
-    firstName: firstName.value.trim(),
-    lastName: lastName.value.trim(),
-    gradeOutput: gradeOutput.value.trim(),
+    assignmentForm: assignmentForm.value.trim(),
   };
-  gradeArray.push(newGrade);
+  assignmentArray.push(newGrade);
   nextId++;
 
-  firstName.value = "";
-  lastName.value = "";
-  gradeOutput.value = "";
+  assignmentForm.value = "";
 
   renderTable();
 });
+/* TO DO - PICK UP SIDE-BY-SIDE COMPARISON ON LINE 28 OF SCRIPT.JS
+// FIGURE OUT WHERE TOPLACE console.log(assignmentForm); 
+// 2P jULY 8
 
 var assignmentArray = JSON.parse(localStorage.getItem("testJSON"));
 
@@ -33,10 +26,11 @@ renderTable();
 
 
 var assignmentArray = [
-  { assignmentName: "Book Report" },
-  { assignmentName: "Final Exam", },
-  { firstName: "Chuckie", lastName: "Cheese", gradeOutput: 65 },
-  { firstName: "Deb", lastName: "ONair", gradeOutput: 55 },
+  { id: 1, assignmentName: "Book Report", },
+  { id: 2, assignmentName: "Final Exam", },
+  { id: 3, assignmentName: "Group Project", },
+  { id: 4, assignmentName: "Diorama",},
+  { id: 5, assignmentName: "Pop Quiz", }
 ];
 
 
@@ -104,7 +98,7 @@ function renderTable() {
 /*loop function and "on click" event listener for the selected delete button will pull data from page, 
 loop through the assignmentArray and remove corresponding items from page */
 
-function deleteAssignment(event) {
+/*function deleteAssignment(event) {
   console.log(`clicked on delete ${event.target.dataset.gradeid}`);
   // function to filter through the array and remove the assignment whose id === event.target.dataset.gradeid
   const filteredArray = assignmentArray.filter(
@@ -125,7 +119,8 @@ renderTable();
 /*  Click a given delete button on webpage, take the corresponding names and grade 
 off of page, store info locally on browser using JSON to stringify the gradeArray*/
 
-const assignmentJSON = JSON.stringify(assignmentArray);
+/*const assignmentJSON = JSON.stringify(assignmentArray);
 localStorage.setItem("testJSON", assignmentJSON);
 
-// the array must have the ability to delete and add things
+// the array must have the ability to delete and add things } 
+*/
