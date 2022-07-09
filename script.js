@@ -28,10 +28,6 @@ inputForm.addEventListener("submit", (event) => {
 
 var gradeArray = JSON.parse(localStorage.getItem("testJSON"));
 
-// 7/3/22 12:13a change to gradeArray should allow for user input to be passed into browser storage
-//
-//to do 6:30 july 2 - make event listener wit document.querySelector remove for new row on page refresh
-
 const infoDeleteRefresh = document.querySelector("tr", "th");
 infoDeleteRefresh.addEventListener(pagerefresh);
 {
