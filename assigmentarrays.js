@@ -18,7 +18,7 @@ assignmentForm.addEventListener("submit", (event) => {
 // needs to genrate a list
 // FIGURE OUT WHERE TOPLACE console.log(assignmentForm); //
 
-var assignmentArray = JSON.parse(localStorage.getItem("testJSON"));
+//var assignmentArray = JSON.parse(localStorage.getItem("testJSON"));
 
 //renderList(assignment);
 
@@ -61,7 +61,7 @@ function newAssignment() {
 /*loop function and "on click" event listener for the selected delete button will pull data from page, 
 loop through the assignmentArray and remove corresponding items from page */
 
- function deleteAssignment(event) {
+/* function deleteAssignment(event) {
   console.log(`clicked on delete ${event.target.dataset.assignmentName}`);
   // function to filter through the array and remove the assignment whose id === event.target.dataset.gradeid
   const filteredArray = assignmentArray.filter(
@@ -70,7 +70,7 @@ loop through the assignmentArray and remove corresponding items from page */
 
   console.log(filteredArray),
 
-  renderTable();
+  renderList(assignment),
 }
 
 
