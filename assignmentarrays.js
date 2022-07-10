@@ -1,47 +1,39 @@
-var assignmentForm = document.getElementById("assignment");
-
-assignmentForm.addEventListener("submit", (event) => {
-  event.preventDefault("submit"); // override default browser reset after "submit"
-
-  const assignmentAdd = {
-    id: nextId,
-    assignmentForm: assignmentForm.value.trim(),
-  };
-  assignmentArray.push(assingnmentAdd);
-  nextId++;
-
-  assignmentForm.value = "";
-  console.log(assignment);
-  //renderList(assignment);
-});
-
-// needs to genrate a list
-// FIGURE OUT WHERE TOPLACE console.log(assignmentForm); //
-
-//var assignmentArray = JSON.parse(localStorage.getItem("testJSON"));
-
-//renderList(assignment);
-
-var assignmentArray = [
+const assignmentArray = [
   { id: 1, assignmentName: "Book Report" },
   { id: 2, assignmentName: "Final Exam" },
   { id: 3, assignmentName: "Group Project" },
   { id: 4, assignmentName: "Diorama" },
   { id: 5, assignmentName: "Pop Quiz" },
 ];
+// assignmentADD is the text input ID on the index html
+// assignmentFORM is a DOM variable in the JS that retrieves assignmentADD
+//
 
-// create new row on Grade Table on webpage//
-//generate a code block for each assignment input
-//array is the placeholder box in assignmentarraysJS
-//list is the list that will appear on the site
-//grade will be assignment
+var assignmentForm = document.getElementById("assignmentAdd");
+assignmentForm.addEventListener("submit", (event) => {
+  event.preventDefault("submit");
+
+  const assignmentAdd = {
+    id: nextId,
+    assignmentForm: assignmentForm.value.trim(),
+  };
+  assignmentArray.push(assignmentArray);
+  nextId++;
+
+  assignmentForm.value = "";
+  console.log(assignmentAdd);
+  //renderList(assignment);
+});
+
+//var assignmentArray = JSON.parse(localStorage.getItem("testJSON"));
+
+//renderList(assignment);
 
 function newAssignment() {
   assignmentArray.innerHTML = "";
 
-  assignmentArray.forEach((assignment) => {
+  assignmentArray.forEach((assignmentForm) => {
     var newAssign = document.createElement("ul");
-    //todo confirm input form ID for assignment page
     newRow.innerHTML = `<td>${assignment.assignmentName}</td>
     
     <td><button data-gradeid=${assignment.id} class="delete-btn">Delete</button></td>`;
