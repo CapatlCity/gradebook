@@ -1,3 +1,5 @@
+// TO DO: 10A JLY 11 - CREATE NEW JS USING EXACT FORMAT FRM UDEMY COURSE TO RENDER LIST
+
 const assignmentArray = [
   { id: 1, assignmentName: "Book Report" },
   { id: 2, assignmentName: "Final Exam" },
@@ -5,31 +7,43 @@ const assignmentArray = [
   { id: 4, assignmentName: "Diorama" },
   { id: 5, assignmentName: "Pop Quiz" },
 ];
+
+const assignmentAdd = {
+  id: nextId,
+  assignmentForm: assignmentForm.value.trim(),
+};
+
+assignmentArray.push(assignmentForm);
+nextId++;
+
+assignmentForm.value = "";
+
+console.log(assignmentArray);
+
+});
+
+const assignmentForm = document.getElementById("assignmentAdd");
+
+const renderList = function (assignmentArray, assignmentForm) {
+
+  assignmentForm.addEventListener("submit", (event) => {
+    event.preventDefault("submit");
+ // localStorage.setItem(assignmentArray, "assignmentAdd");
+ // console.log(localStorage.getItem("assignmentAdd"))
+
+});
+
 // assignmentADD is the text input ID on the index html
 // assignmentFORM is a DOM variable in the JS that retrieves assignmentADD
-//
 
-var assignmentForm = document.getElementById("assignmentAdd");
 assignmentForm.addEventListener("submit", (event) => {
   event.preventDefault("submit");
 
-  const assignmentAdd = {
-    id: nextId,
-    assignmentForm: assignmentForm.value.trim(),
-  };
-  assignmentArray.push(assignmentArray);
-  nextId++;
-
-  assignmentForm.value = "";
-  console.log(assignmentAdd);
-  //renderList(assignment);
-});
-
-//var assignmentArray = JSON.parse(localStorage.getItem("testJSON"));
+  
 
 //renderList(assignment);
 
-function newAssignment() {
+/*function newAssignment() {
   assignmentArray.innerHTML = "";
 
   assignmentArray.forEach((assignmentForm) => {
@@ -67,13 +81,8 @@ loop through the assignmentArray and remove corresponding items from page */
 
 
 
-renderTable();
 
 /*  Click a given delete button on webpage, take the corresponding names and grade 
 off of page, store info locally on browser using JSON to stringify the gradeArray*/
 
-/*const assignmentJSON = JSON.stringify(assignmentArray);
-localStorage.setItem("testJSON", assignmentJSON);
-
-// the array must have the ability to delete and add things } 
-*/
+/*const assignmentJSON = JSON.stringify(assignmentArray); localStorage.setItem("testJSON", assignmentJSON); } */
