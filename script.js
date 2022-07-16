@@ -34,7 +34,6 @@ infoDeleteRefresh.addEventListener(pagerefresh);
   infoDeleteRefresh.remove();
 }
 
-// remove(newRow)
 
 // create new row on Grade Table on webpage//
 function renderTable() {
