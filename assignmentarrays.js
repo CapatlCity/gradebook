@@ -34,6 +34,7 @@ if (!localStorage.getItem("assignmentArray")) {
 }
 
 //loop over localSTorage and render <li> fro each assignment name 07/16
+
 function renderList() {
   var assignmentArray = JSON.parse(localStorage.getItem("assignmentArray"));
 
@@ -41,22 +42,7 @@ function renderList() {
     //length here refers to the number of items in the array, not length of strings
     var newAssign = document.createElement("li");
     newAssign.textContent = assignmentArray[i].assignmentName; //variable called-commandtextContent-banana name for local storage data-action-create element variable
-    document.getElementById("assignment-list").appendChild(newAssign);
+    document.getElementById("assignment-list").appendChild(newAssign); //do not edit 7/16
   }
-
-  const assignmentToAdd = {
-    id: nextId,
-    assignmentName: assignmentAdd.value.trim(),
-  };
-  seeds.push(assignmentForm);
-  nextId++;
-
-  assignmentAdd.value.trim();
-
-  renderList();
+  return [item.assignment, item.grades];
 }
-
-// to do
-// push to array
-//console log the string
-// add hyperlinks
