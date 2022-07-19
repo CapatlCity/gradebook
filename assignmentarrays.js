@@ -39,10 +39,12 @@ function renderList() {
   var assignmentArray = JSON.parse(localStorage.getItem("assignmentArray"));
 
   for (var i = 0; i < assignmentArray.length; i++) {
+    //for (runs once before codeblock; define how code should run; executes after code execution)
     //length here refers to the number of items in the array, not length of strings
     var newAssign = document.createElement("li");
     newAssign.textContent = assignmentArray[i].assignmentName; //variable called-commandtextContent-banana name for local storage data-action-create element variable
     document.getElementById("assignment-list").appendChild(newAssign); //do not edit 7/16
   }
-  return [item.assignment, item.grades];
+  return [seeds.assignment, seeds.grades];
 }
+// property.attribute syntax
